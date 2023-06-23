@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/todo-bachelor-thesis/',
   plugins: [
     vue(),
   ],
@@ -17,8 +18,5 @@ export default defineConfig({
   build: {
     emptyOutDir: true,
     outDir: './dist',
-  },
-  server: {
-    host: false,
   },
 });
