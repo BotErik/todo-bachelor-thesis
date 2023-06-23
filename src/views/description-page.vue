@@ -34,8 +34,8 @@ export default {
         </div>
         <div class="mt-[5px] text-[18px] font-medium leading-10">Variante: ohne Animationen</div>
       </div>
-      <div class="mt-[20px] min-h-[calc(100vh-350px)] h-[calc(100vh-350px)] flex flex-col justify-between text-light-text dark:text-dark-text">
-        <div class="my-[20px] text-[18px] flex flex-col gap-[15px] max-w-[80vw] overflow-y-auto scroll-box">
+      <div class="mt-[20px] min-h-[calc(100vh-350px)] flex flex-col justify-between text-light-text dark:text-dark-text">
+        <div class="my-[20px] text-[18px] flex flex-col gap-[15px] max-w-[80vw] max-h-[40vh] overflow-y-auto scroll-box">
           <div class="text-[30px] font-bold">Beschreibung</div>
           <div>
             Dieser Prototyp wurde im Rahmen

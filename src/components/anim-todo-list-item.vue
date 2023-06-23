@@ -90,8 +90,26 @@ export default {
 
     })
   },
-  methods: {
+  updated() {
+    if (this.editToggle) {
+      const editInput = document.querySelector('input[type=text].editInput');
+      const menuButton = document.getElementById('mobileMenu');
+      const modeToggle = document.getElementById('modeToggle');
 
+      editInput.onfocus = function () {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+
+        menuButton.style.position = 'absolute';
+        menuButton.style.top = '0px';
+        menuButton.style.left = '0px';
+        modeToggle.style.position = 'absolute';
+        modeToggle.style.top = '30px';
+        modeToggle.style.right = '30px';
+      }
+    }
+  },
+  methods: {
     updateItemText: function(e) {
       this.newTodoItem = e.currentTarget.value;
 

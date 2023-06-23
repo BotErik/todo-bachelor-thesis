@@ -30,7 +30,7 @@ export default {
 </script>
 
 <template>
-  <div v-if="windowWidth <= 1079" class="absolute top-0 left-0 p-0 m-0" :style="open==true?'width: calc(100% - 30px); height: calc(100% - 30px);':'width: fit-content; height: fit-content'">
+  <div v-if="windowWidth <= 1079" id="mobileMenu" class="absolute top-0 left-0 p-0 m-0" :style="open==true?'width: calc(100% - 30px); height: calc(100% - 30px);':'width: fit-content; height: fit-content'">
     <button @click="open == false?open=true:open=false" class="absolute top-[30px] left-[30px] bg-light-text dark:bg-dark-text rounded-[10px] z-30 w-[71px] h-[71px]">
       <svg v-if="open == false" class="absolute top-[20px] left-[15px]" width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="40" height="4" rx="2" class="fill-light-background dark:fill-dark-background"/>

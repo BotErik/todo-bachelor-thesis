@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-  <main class="mt-[130px] desktop:mt-[150px] desktop:flex desktop:justify-center">
+  <main class="mt-[130px] desktop:mt-[50px] desktop:flex desktop:justify-center">
     <div v-if="windowWidth <= 1079" class="w-full h-fit">
       <div class="text-light-text dark:text-dark-text">
         <div class="text-[55px] font-bold w-fit leading-10">
@@ -34,8 +34,8 @@ export default {
         </div>
         <div class="mt-[5px] text-[18px] font-medium leading-10">Variante: mit Animationen</div>
       </div>
-      <div class="mt-[20px] min-h-[calc(100vh-350px)] h-[calc(100vh-350px)] flex flex-col justify-between text-light-text dark:text-dark-text">
-        <div class="my-[20px] text-[18px] flex flex-col gap-[15px] max-w-[80vw] overflow-y-auto scroll-box">
+      <div class="mt-[20px] min-h-[calc(100vh-350px)] flex flex-col justify-between text-light-text dark:text-dark-text">
+        <div class="fixed my-[20px] text-[18px] flex flex-col gap-[15px] max-w-[80vw] max-h-[40vh] overflow-y-auto scroll-box">
           <div class="text-[30px] font-bold">Beschreibung</div>
           <div>
             Dieser Prototyp wurde im Rahmen
@@ -55,7 +55,7 @@ export default {
           </div>
         </div>
       </div>
-      <div class="absolute flex justify-center w-[calc(100%-60px)] text-[15px] font-medium text-light-text-38 dark:text-dark-text-38">
+      <div class="absolute bottom-[30px] flex justify-center w-[calc(100%-60px)] text-[15px] font-medium text-light-text-38 dark:text-dark-text-38">
         © Erik Grüneberger - 2023
       </div>
     </div>

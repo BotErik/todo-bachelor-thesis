@@ -83,7 +83,7 @@ export default {
 </script>
 
 <template>
-  <div v-if="windowWidth <= 1079" class="absolute top-0 left-0 p-0 m-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
+  <div v-if="windowWidth <= 1079" id="mobileMenu" class="absolute top-0 left-0 p-0 m-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
     <button ref="menuButton" @click="menuAnimation()" class="absolute top-[30px] left-[30px] bg-light-text dark:bg-dark-text rounded-[10px] z-30 w-[71px] h-[71px]">
       <svg class="absolute top-[20px] left-[15px] fill-light-background dark:fill-dark-background" width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect ref="menuIcon_top" width="40" height="4" rx="2"/>

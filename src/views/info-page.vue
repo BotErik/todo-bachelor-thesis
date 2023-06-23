@@ -41,7 +41,7 @@ export default {
             <div class="text-light-primary dark:text-dark-primary font-bold text-[30px] leading-snug desktop:text-[60px]">Test Anwendung</div>
             <div class="max-w-[400px] text-light-text dark:text-dark-text font-medium text-[20px] leading-10 desktop:text-[30px] desktop:leading-[30px]">Praktische Leistung Bachelorarbeit</div>
           </div>
-          <div>
+          <div class="max-h-[30vh] overflow-auto scroll-box">
             <div class="text-light-text dark:text-dark-text font-normal text-[16px] leading-tight desktop:text-[18px]">Diese ToDo Anwendung gibt es in zwei Varianten:</div>
             <ul class="list-disc pl-[30px] pt-[10px] pb-[10px]">
               <li class="text-light-text dark:text-dark-text font-normal text-[16px] leading-tight desktop:text-[18px]">statisch, <span class="text-light-primary dark:text-dark-primary">ohne</span> Animationen</li>
@@ -57,7 +57,7 @@ export default {
             <div class="text-light-primary dark:text-dark-primary font-bold text-[30px] leading-snug desktop:text-[60px]">Test Anwendung</div>
             <div class="max-w-[400px] text-light-text dark:text-dark-text font-medium text-[20px] leading-10 desktop:text-[30px] desktop:leading-[30px]">Information</div>
           </div>
-          <div>
+          <div class="max-h-[30vh] overflow-auto scroll-box">
             <div class="text-light-text dark:text-dark-text font-normal text-[16px] leading-tight desktop:text-[18px]">Bitte teste folgende Fälle auf deinem <span class="font-bold text-light-primary dark:text-dark-primary">Mobilgerät</span> :</div>
             <ul class="list-disc pl-[30px] pt-[10px] pb-[10px]">
               <li class="text-light-text dark:text-dark-text font-normal text-[16px] leading-tight desktop:text-[18px]">Öffne und schließe das Menü</li>

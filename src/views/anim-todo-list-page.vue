@@ -43,7 +43,7 @@ export default {
     setMaxHeight() {
       const todoBox = document.getElementById('scroll-box-height');
 
-      const percentage = 0.65;
+      const percentage = 0.40;
 
       let maxHeight = this.windowHeight * percentage;
 

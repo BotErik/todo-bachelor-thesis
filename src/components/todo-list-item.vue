@@ -11,6 +11,25 @@ export default {
     editToggle: false,
     isChecked: false,
   }),
+  updated() {
+    if (this.editToggle) {
+      const editInput = document.querySelector('input[type=text].editInput');
+      const menuButton = document.getElementById('mobileMenu');
+      const modeToggle = document.getElementById('modeToggle');
+
+      editInput.onfocus = function () {
+        window.scrollTo(0, 0);
+        document.body.scrollTop = 0;
+
+        menuButton.style.position = 'absolute';
+        menuButton.style.top = '0px';
+        menuButton.style.left = '0px';
+        modeToggle.style.position = 'absolute';
+        modeToggle.style.top = '30px';
+        modeToggle.style.right = '30px';
+      }
+    }
+  },
   methods: {
     updateItemText: function(e) {
       this.newTodoItem = e.currentTarget.value;
@@ -129,7 +148,7 @@ export default {
             </svg>
             <div class="text-light-panel dark:text-dark-text text-[15px] font-medium leading-10">Löschen</div>
           </button>
-          <button @click="editToggle===false?editToggle=true:editToggle=false" class="flex flex-col justify-center items-center gap-[2px] w-full bg-light-warning dark:bg-dark-warning">
+          <button @click="!editToggle?editToggle=true:editToggle=false" class="flex flex-col justify-center items-center gap-[2px] w-full bg-light-warning dark:bg-dark-warning">
             <svg class="stroke-dark-panel dark:stroke-light-text" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.8462 25H2.84615C2.35652 25 1.88695 24.8055 1.54073 24.4593C1.1945 24.1131 1 23.6435 1 23.1538V2.84615C1 2.35652 1.1945 1.88695 1.54073 1.54073C1.88695 1.1945 2.35652 1 2.84615 1H16.6923" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M19.4615 6.53846L22.2308 1L25 6.53846V22.2308C25 22.9652 24.7082 23.6696 24.1889 24.1889C23.6696 24.7082 22.9652 25 22.2308 25C21.4963 25 20.792 24.7082 20.2726 24.1889C19.7533 23.6696 19.4615 22.9652 19.4615 22.2308V6.53846Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -144,7 +163,7 @@ export default {
     </div>
     <div v-if="editToggle" class="h-0"></div>
     <div v-if="editToggle" class="flex flex-grow h-[40px] gap-[5px] items-center px-[5px]">
-      <input :data-id="todoItem.id" :id="todoItem.id" @keyup="updateItemText" type="text" class="editInput h-[30px] w-full rounded-[10px] bg-light-background dark:bg-dark-background px-[10px] text-[16px] font-medium text-light-text dark:text-dark-text placeholder:text-light-text-38 placeholder:dark:text-dark-text-38" placeholder="ToDo Titel editieren ..." :value="todoItem.name">
+      <input :data-id="todoItem.id" :id="todoItem.id" @keyup="updateItemText" type="text" class="editInput h-[30px] w-full rounded-[10px] bg-light-background dark:bg-dark-background px-[10px] text-[16px] font-medium text-light-text dark:text-dark-text placeholder:text-light-text-38 placeholder:dark:text-dark-text-38" placeholder="ToDo Titel editieren ..." :value="todoItem.name"/>
       <button :data-id="todoItem.id" :id="todoItem.id" @click="updateTitle" class="text-[15px] font-medium text-light-text dark:text-dark-text px-[10px] h-[30px] rounded-[10px] bg-light-success dark:bg-dark-success">Speichern</button>
     </div>
   </div>
