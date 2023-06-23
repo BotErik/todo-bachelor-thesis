@@ -1,0 +1,33 @@
+@import './colors.css';
+@import './base-styling.css';
+@import './font-setup.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.stepper-item.success .stepper-item-counter {
+  @apply bg-light-text dark:bg-dark-text
+}
+
+.stepper-item.current .stepper-item-counter {
+  @apply bg-light-primary dark:bg-dark-primary
+}
+
+input:checked + div {
+  @apply bg-light-success dark:bg-dark-success border-light-success dark:border-dark-success
+}
+
+input:checked + div svg {
+  @apply block
+}
+
+.scroll-box::-webkit-scrollbar {
+  position: absolute;
+  right: -10px;
+  width: 3px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  @apply bg-light-text-38 rounded-[5px]
+}

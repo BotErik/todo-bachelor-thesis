@@ -1,0 +1,21 @@
+@supports (font-variation-settings: 'wght' 400) {
+  @font-face {
+    font-family: 'Outfit';
+    src: url('@/assets/fonts/Outfit-VariableFont_wght.ttf') format('truetype');
+  }
+}
+
+@supports not (font-variation-settings: 'wght' 400) {
+  @font-face {
+    font-family: 'Outfit Regular', sans-serif;
+    src: url('@/assets/fonts/Outfit-Regular.ttf');
+  }
+  @font-face {
+    font-family: 'Outfit Medium', sans-serif;
+    src: url('@/assets/fonts/Outfit-Medium.ttf');
+  }
+  @font-face {
+    font-family: 'Outfit Bold', sans-serif;
+    src: url('@/assets/fonts/Outfit-Bold.ttf');
+  }
+}
