@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-  <main class="mt-[130px] desktop:mt-[50px] desktop:flex desktop:justify-center">
+  <main class="fixed top-[150px] left-[30px] right-[30px] desktop:mt-[50px] desktop:flex desktop:justify-center">
     <div v-if="windowWidth <= 1079" class="w-full h-fit">
       <div class="text-light-text dark:text-dark-text">
         <div class="text-[55px] font-bold w-fit leading-10">
@@ -55,7 +55,7 @@ export default {
           </div>
         </div>
       </div>
-      <div class="absolute bottom-[30px] flex justify-center w-[calc(100%-60px)] text-[15px] font-medium text-light-text-38 dark:text-dark-text-38">
+      <div class="fixed bottom-[30px] flex justify-center w-[calc(100%-60px)] text-[15px] font-medium text-light-text-38 dark:text-dark-text-38">
         © Erik Grüneberger - 2023
       </div>
     </div>
