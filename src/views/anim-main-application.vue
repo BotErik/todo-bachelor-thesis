@@ -23,7 +23,7 @@ export default {
         width: '100%',
         height: '100%',
         borderRadius: '10px 0 0 0',
-        ease: 'ease-out'
+        ease: 'ease-out',
       })
       .to(this.$refs.menuContent, {
         duration: 0.3,
@@ -66,12 +66,21 @@ export default {
       this.windowWidth = window.innerWidth
     },
     menuAnimation() {
+      const menu = document.getElementById('mobileMenu');
 
       this.menuAnim.reversed(!this.menuAnim.reversed());
 
       this.menuIconAnim.reversed(!this.menuIconAnim.reversed());
     
       this.open = !this.open;
+
+      if (this.open) {
+        menu.classList.add('z-[100]');
+      } else {
+        setTimeout(function() {
+          menu.classList.remove('z-[100]');
+        }, 500)
+      }
     }
   },
   computed: {
@@ -83,15 +92,15 @@ export default {
 </script>
 
 <template>
-  <div v-if="windowWidth <= 1079" id="mobileMenu" class="absolute top-0 left-0 p-0 m-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
-    <button ref="menuButton" @click="menuAnimation()" class="absolute top-[30px] left-[30px] bg-light-text dark:bg-dark-text rounded-[10px] z-30 w-[71px] h-[71px]">
+  <div v-if="windowWidth <= 1079" id="mobileMenu" class="fixed top-[30px] left-[30px] p-0 m-0 w-[calc(100%-30px)] h-[calc(100%-30px)]">
+    <button ref="menuButton" @click="menuAnimation()" class="absolute top-[0px] left-[0px] bg-light-text dark:bg-dark-text rounded-[10px] z-30 w-[71px] h-[71px]">
       <svg class="absolute top-[20px] left-[15px] fill-light-background dark:fill-dark-background" width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect ref="menuIcon_top" width="40" height="4" rx="2"/>
         <rect ref="menuIcon_middle" y="14" width="30" height="4" rx="2"/>
         <rect ref="menuIcon_bottom" y="28" width="40" height="4" rx="2"/>
       </svg>
     </button>
-    <div ref="menuBackground" class="absolute top-[30px] left-[30px] w-0 h-0 bg-light-text dark:bg-dark-text rounded-[10px] z-[29] flex flex-col items-center">
+    <div ref="menuBackground" class="absolute top-[0px] left-[0px] w-0 h-0 bg-light-text dark:bg-dark-text rounded-[10px] flex flex-col items-center">
       <div ref="menuContent" class="hidden flex-col justify-between h-[0%] mt-[150px] mb-[50px]">
         <div class="text-dark-text dark:text-light-text h-[50%] flex flex-col justify-between">
           <div ref="menuItem" class="menuItem font-bold text-[40px] leading-10 w-fit">

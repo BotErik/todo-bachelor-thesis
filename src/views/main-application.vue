@@ -30,8 +30,8 @@ export default {
 </script>
 
 <template>
-  <div v-if="windowWidth <= 1079" id="mobileMenu" class="absolute top-0 left-0 p-0 m-0" :style="open==true?'width: calc(100% - 30px); height: calc(100% - 30px);':'width: fit-content; height: fit-content'">
-    <button @click="open == false?open=true:open=false" class="absolute top-[30px] left-[30px] bg-light-text dark:bg-dark-text rounded-[10px] z-30 w-[71px] h-[71px]">
+  <div v-if="windowWidth <= 1079" id="mobileMenu" class="fixed z-[100] top-0 left-0 p-0 m-0" :style="open==true?'width: calc(100% - 30px); height: calc(100% - 30px);':'width: fit-content; height: fit-content'">
+    <button @click="open == false?open=true:open=false" class="fixed top-[30px] left-[30px] bg-light-text dark:bg-dark-text rounded-[10px] z-[100000] w-[71px] h-[71px]">
       <svg v-if="open == false" class="absolute top-[20px] left-[15px]" width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="40" height="4" rx="2" class="fill-light-background dark:fill-dark-background"/>
         <rect y="28" width="40" height="4" rx="2" class="fill-light-background dark:fill-dark-background"/>
@@ -43,7 +43,7 @@ export default {
         <rect x="28.2842" y="31.1127" width="40" height="4" rx="2" transform="rotate(-135 28.2842 31.1127)" class="fill-light-background dark:fill-dark-background"/>
       </svg>
     </button>
-    <div class="absolute top-[30px] left-[30px] bg-light-text dark:bg-dark-text rounded-[10px] z-[29] flex flex-col items-center" :style="open==true?'width: 100%; height: 100%; border-radius: 10px 0 0 0':'width: 0px; height: 0px'">
+    <div class="fixed top-[30px] left-[30px] bg-light-text dark:bg-dark-text rounded-[10px] z-[50] flex flex-col items-center" :style="open==true?'width: 100%; height: 100%; border-radius: 10px 0 0 0':'width: 0px; height: 0px'">
       <div v-if="open == true" class="flex flex-col justify-between h-[100%] mt-[150px] mb-[50px]">
         <div class="text-dark-text dark:text-light-text h-[50%] flex flex-col justify-between">
           <div class="font-bold text-[40px] leading-10 w-fit">

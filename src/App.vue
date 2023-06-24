@@ -21,8 +21,8 @@ export default {
 </script>
 
 <template>
-  <div class="p-[30px] w-screen h-screen bg-light-background dark:bg-dark-background">
-    <button @click="toggleDark()" id="modeToggle" class="absolute top-[30px] right-[30px] p-[2px] z-10 rounded-full h-[71px] w-[37px] bg-light-text dark:bg-dark-text">
+  <div class="relative z-0 p-[30px] w-screen h-screen bg-light-background dark:bg-dark-background">
+    <button @click="toggleDark()" id="modeToggle" class="fixed top-[30px] right-[30px] p-[2px] rounded-full h-[71px] w-[37px] bg-light-text dark:bg-dark-text">
       <div class="absolute bottom-[2px] bg-light-background dark:bg-dark-background w-[33px] h-[33px] rounded-full mx-auto flex justify-center items-center" :style="isDark?'bottom: 36px':''">
         <img class="block dark:hidden" src="./assets/svg/mobile/light-dark-toggle__sun.svg" alt="Icon einer Sonne">
         <img class="hidden dark:block" src="./assets/svg/mobile/light-dark-toggle__moon.svg" alt="Icon eines Halbmondes">

@@ -103,7 +103,7 @@ export default {
 </script>
 
 <template>
-  <main class="mt-[130px] desktop:mt-[50px] desktop:flex desktop:justify-center h-screen">
+  <main class="fixed top-[150px] left-[30px] right-[30px] desktop:mt-[50px] desktop:flex desktop:justify-center h-screen">
     <div v-if="windowWidth <= 1079" class="w-full h-fit">
       <div class="text-light-text dark:text-dark-text">
         <div class="text-[55px] font-bold w-fit leading-10">

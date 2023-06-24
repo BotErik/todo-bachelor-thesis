@@ -21,19 +21,10 @@ export default {
   updated() {
     if (this.show) {
       const editInput = document.querySelector('input[type=text].addInput');
-      const menuButton = document.getElementById('mobileMenu');
-      const modeToggle = document.getElementById('modeToggle');
   
       editInput.onfocus = function () {
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
-
-        menuButton.style.position = 'absolute';
-        menuButton.style.top = '0px';
-        menuButton.style.left = '0px';
-        modeToggle.style.position = 'absolute';
-        modeToggle.style.top = '30px';
-        modeToggle.style.right = '30px';
       }
     }
   },
@@ -72,7 +63,7 @@ export default {
 
 <template>
   <Transition name="modal">
-    <div v-if="show" class="modal-mask fixed top-0 left-0 w-full h-full bg-light-text bg-opacity-90 z-[9999] flex justify-center items-center">
+    <div v-if="show" class="modal-mask fixed top-0 left-0 w-full h-full bg-light-text bg-opacity-90 z-[20000] flex justify-center items-center">
       <div class="modal-container relative mx-[30px] h-[40%] w-full bg-light-panel dark:bg-dark-text rounded-[10px] flex flex-col justify-center p-[20px] gap-[20px]">
         <button @click="$emit('close')" class="absolute top-0 right-0 w-[48px] h-[48px] bg-light-success dark:bg-dark-success rounded-[10px] flex justify-center items-center">
           <svg class="fill-light-text dark:fill-dark-text" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">

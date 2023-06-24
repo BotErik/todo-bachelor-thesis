@@ -14,19 +14,10 @@ export default {
   updated() {
     if (this.editToggle) {
       const editInput = document.querySelector('input[type=text].editInput');
-      const menuButton = document.getElementById('mobileMenu');
-      const modeToggle = document.getElementById('modeToggle');
 
       editInput.onfocus = function () {
         window.scrollTo(0, 0);
         document.body.scrollTop = 0;
-
-        menuButton.style.position = 'absolute';
-        menuButton.style.top = '0px';
-        menuButton.style.left = '0px';
-        modeToggle.style.position = 'absolute';
-        modeToggle.style.top = '30px';
-        modeToggle.style.right = '30px';
       }
     }
   },
@@ -88,7 +79,7 @@ export default {
 </script>
 
 <template>
-  <div v-if="todoItem.location == $route.path" class="relative flex flex-wrap justify-between items-center bg-light-panel dark:bg-dark-panel rounded-[10px] h-fit w-full">
+  <div v-if="todoItem.location == $route.path" class="relative z-0 flex flex-wrap justify-between items-center bg-light-panel dark:bg-dark-panel rounded-[10px] h-fit w-full">
     <div class="flex flex-grow flex-row w-full">
       <div class="relative px-[20px] flex items-center min-h-full z-10" :data-status="todoItem.completed">
         <input :data-id="todoItem.id" :id="todoItem.id" @click="updateTodo" :checked="todoItem.completed" type="checkbox" v-model="isChecked" class="opacity-0 absolute top-0 left-0 h-full w-full">

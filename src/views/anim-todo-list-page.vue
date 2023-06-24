@@ -103,7 +103,7 @@ export default {
 </script>
 
 <template>
-  <main class="mt-[130px] desktop:mt-[50px] desktop:flex desktop:justify-center h-screen">
+  <main class="fixed top-[150px] left-[30px] right-[30px] desktop:mt-[50px] desktop:flex desktop:justify-center h-screen">
     <div v-if="windowWidth <= 1079" class="w-full h-fit">
       <div class="text-light-text dark:text-dark-text">
         <div class="text-[55px] font-bold w-fit leading-10">
@@ -115,7 +115,7 @@ export default {
       <div class="mt-[20px]">
         <div class="flex flex-row justify-between items-center">
           <div class="text-[25px] font-bold text-light-text dark:text-dark-text">ToDo Liste</div>
-          <button @click="showModal = true" class="absolute right-[30px] w-[48px] h-[48px] bg-light-success dark:bg-dark-success rounded-[10px] flex justify-center items-center">
+          <button @click="showModal = true" class="w-[48px] h-[48px] bg-light-success dark:bg-dark-success rounded-[10px] flex justify-center items-center">
             <svg class="fill-light-text dark:fill-dark-text" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="2.00002" y="16.4" width="32" height="3.2" rx="1.6"/>
               <rect x="16.4" y="34" width="32" height="3.2" rx="1.6" transform="rotate(-90 16.4 34)"/>
