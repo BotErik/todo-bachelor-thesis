@@ -15,6 +15,18 @@ export default {
 </script>
 
 <template>
+  <div class="hidden desktop:flex desktop:fixed desktop:z-[999999] desktop:top-[30px] desktop:left-[30px] desktop:w-fit">
+    <a href="www.qr-code-generator.com/" border="0" style="cursor:default" rel="nofollow"/>
+    <img src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fboterik.github.io%2Ftodo-bachelor-thesis%2F&chs=180x180&choe=UTF-8&chld=L|2"/>
+    <div class="ml-[10px] flex-row bg-light-warning-30 dark:bg-dark-warning-30 border-light-warning dark:border-dark-warning border-2 p-[10px] rounded-[10px] w-fit h-fit flex items-center gap-[10px]">
+      <svg class="stroke-light-text dark:stroke-dark-text" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.6071 24.2143C19.0176 24.2143 24.2143 19.0176 24.2143 12.6071C24.2143 6.19669 19.0176 1 12.6071 1C6.19669 1 1 6.19669 1 12.6071C1 19.0176 6.19669 24.2143 12.6071 24.2143Z" stroke-width="1.78571" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12.6071 12.6072V18.8572" stroke-width="1.78571" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12.6071 9.03571C13.1003 9.03571 13.5 8.63597 13.5 8.14286C13.5 7.64975 13.1003 7.25 12.6071 7.25C12.114 7.25 11.7143 7.64975 11.7143 8.14286C11.7143 8.63597 12.114 9.03571 12.6071 9.03571Z" stroke-width="1.78571" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="text-[15px] font-medium text-light-text dark:text-dark-text">Qr-Code scannen und Anwendung auf dem Mobilgerät öffnen.</div>
+    </div>
+  </div>
   <div class="grid grid-cols-1 min-h-full items-center">
     <div class="w-full h-fit flex justify-center items-center">
       <div class="relative h-fit flex justify-center bg-light-panel dark:bg-dark-panel text-light-text dark:text-dark-text w-[100%] text-lg rounded-[30px] max-w-[1200px] max-h-[750px] pt-[35px] px-[30px] pb-[50px] desktop:px-[90px]">
