@@ -2,6 +2,7 @@
   "name": "todo-bachelor-thesis",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://boterik.github.io/todo-bachelor-thesis/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -9,7 +10,9 @@
     "test:unit": "vitest",
     "test:e2e": "playwright test",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d dist"
   },
   "dependencies": {
     "@vueuse/core": "^10.1.2",
@@ -31,6 +34,7 @@
     "autoprefixer": "^10.4.14",
     "eslint": "^8.39.0",
     "eslint-plugin-vue": "^9.11.0",
+    "gh-pages": "^6.1.1",
     "jsdom": "^22.1.0",
     "postcss": "^8.4.24",
     "prettier": "^2.8.8",
